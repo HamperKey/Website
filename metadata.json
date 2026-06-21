@@ -1,0 +1,6 @@
+{
+  "name": "HamperKey",
+  "description": "A premium pre-arrival gourmet food and drinks delivery service for UK hotels, Airbnbs, cottages, and serviced apartments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
