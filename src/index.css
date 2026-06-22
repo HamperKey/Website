@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-stone: #F5F2EE;
+  --color-cream: #FAF8F4;
+  --color-warm-white: #FEFCF9;
+  --color-charcoal: #1C1C1C;
+  --color-dark: #14130F;
+  --color-mid: #4A4A4A;
+  --color-light: #8A8480;
+  --color-accent: #8B7355;
+  --color-accent-light: #C4A882;
+  --color-accent-pale: #EDE4D8;
+  --color-sage: #6B7C5E;
+  --color-sage-pale: #E4EAE0;
+  --color-rule: #DDD8D0;
+
+  /* Custom animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Global resets and core styling */
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-stone);
+  color: var(--color-mid);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for neat presentation during transitions */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-stone);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-pale);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-light);
+}
+
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
