@@ -220,6 +220,13 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .why-icon{font-size:24px;margin-bottom:12px}
 .why-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--dark);margin-bottom:8px}
 .why-desc{font-size:12px;color:var(--mid);font-weight:300;line-height:1.6}
+.testimonials{background:var(--white)}
+.testi-empty{max-width:520px;margin:0 auto;text-align:center;background:var(--bg);border:1px solid var(--rule);border-radius:var(--rs);padding:44px 36px}
+.testi-empty-icon{font-size:32px;margin-bottom:14px}
+.testi-empty-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--burg);margin-bottom:10px}
+.testi-empty-desc{font-size:13px;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:22px}
+.testi-cta{display:inline-block;background:var(--burg);color:var(--white);text-decoration:none;border-radius:999px;padding:12px 26px;font-size:13px;font-weight:600;transition:background .2s}
+.testi-cta:hover{background:var(--accent-d)}
 
 /* PARTNERS */
 .partners{background:var(--white)}
@@ -415,6 +422,7 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <li><a href="#about">About</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="#builder">Build Yours</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#partners">Partners</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#packages" class="nav-cta">Get Started</a></li>
@@ -494,7 +502,7 @@ footer{background:var(--dark);padding:60px 40px 28px}
           <tr><td>Local &amp; regional British suppliers</td><td class="us"><span class="ck">&#10003;</span> Yes — 100% British supply</td><td><span class="cx">Generic items</span></td></tr>
           <tr><td>Occasion packages</td><td class="us"><span class="ck">&#10003;</span> Yes — tailored to your occasion</td><td><span class="cx">Not offered</span></td></tr>
           <tr><td>All property types</td><td class="us"><span class="ck">&#10003;</span> Hotels, villas, cottages</td><td><span class="cx">Airbnb-focused</span></td></tr>
-          <tr><td>Partner commission program</td><td class="us"><span class="ck">&#10003;</span> 10–20% per order</td><td><span class="cx">None</span></td></tr>
+          <tr><td>Partner commission program</td><td class="us"><span class="ck">&#10003;</span> 10–15% per order</td><td><span class="cx">None</span></td></tr>
           <tr><td>In-stay restock &amp; upsell</td><td class="us"><span class="ck">&#10003;</span> Automated</td><td><span class="cx">One-off only</span></td></tr>
         </tbody>
       </table>
@@ -703,7 +711,21 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="why-card"><div class="why-icon">&#x1F5FA;</div><div class="why-title">Regional Coverage</div><p class="why-desc">London, South East and East of England — with more regions joining as we grow.</p></div>
       <div class="why-card"><div class="why-icon">&#x1F381;</div><div class="why-title">Occasion Packages</div><p class="why-desc">Birthdays, anniversaries, honeymoons &amp; proposals — handled with care.</p></div>
       <div class="why-card"><div class="why-icon">&#x1F3E8;</div><div class="why-title">Every Property Type</div><p class="why-desc">Hotels, villas, serviced apartments &amp; cottages — not just Airbnb.</p></div>
-      <div class="why-card"><div class="why-icon">&#x1F91D;</div><div class="why-title">Partner Commission</div><p class="why-desc">Accommodation partners earn 10–20% on every order, automatically tracked.</p></div>
+      <div class="why-card"><div class="why-icon">&#x1F91D;</div><div class="why-title">Partner Commission</div><p class="why-desc">Accommodation partners earn 10–15% on every order, automatically tracked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec testimonials" id="testimonials">
+  <div class="sec-in">
+    <p class="lbl">Reviews</p>
+    <h2 class="stitle">What guests &amp; partners <em>are saying</em>.</h2>
+    <p class="sintro">We're a genuinely small, hands-on team, and we'd rather show you real feedback from real people than write it ourselves. This section fills in as our first reviews come in.</p>
+    <div class="testi-empty">
+      <div class="testi-empty-icon">&#x1F4AC;</div>
+      <p class="testi-empty-title">We're just getting started.</p>
+      <p class="testi-empty-desc">Every review that appears here will be from an actual guest or accommodation partner &mdash; nothing written by us, nothing invented. Check back soon.</p>
+      <a class="testi-cta" href="mailto:hello@hamperkey.co.uk?subject=My%20HamperKey%20Review&amp;body=Hi%20HamperKey%2C%0D%0A%0D%0AHere%27s%20my%20experience%3A%0D%0A%0D%0A1.%20What%20package%20or%20service%20did%20you%20use%3F%0D%0A%0D%0A2.%20How%20was%20your%20arrival%20experience%3F%0D%0A%0D%0A3.%20Would%20you%20recommend%20HamperKey%20to%20others%3F%0D%0A%0D%0AName%20(or%20let%20us%20know%20if%20you%27d%20prefer%20to%20stay%20anonymous)%3A%0D%0AProperty%2FPartner%20name%20(optional)%3A">Share Your Experience &#x2192;</a>
     </div>
   </div>
 </section>
@@ -742,7 +764,7 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="faq-item"><button class="faq-q">What if I have dietary needs or allergies? <span class="faq-icon">+</span></button><div class="faq-a">Every package can be adjusted for vegan, vegetarian, halal, gluten-free and dairy-free needs. Flag specific requirements at checkout or email hello@hamperkey.co.uk before ordering.</div></div>
       <div class="faq-item"><button class="faq-q">Can I order alcohol with my package? <span class="faq-icon">+</span></button><div class="faq-a">Yes — alcohol is supplied through licensed local partners with age verification at checkout. Alcohol-free alternatives are offered on every package.</div></div>
       <p class="faq-group">For Hosts &amp; Property Managers</p>
-      <div class="faq-item"><button class="faq-q">How do I become a partner? <span class="faq-icon">+</span></button><div class="faq-a">Email hello@hamperkey.co.uk or click Become a Partner above. No setup fee for your first 10 properties. You earn 10–20% commission automatically on every guest order.</div></div>
+      <div class="faq-item"><button class="faq-q">How do I become a partner? <span class="faq-icon">+</span></button><div class="faq-a">Email hello@hamperkey.co.uk or click Become a Partner above. No setup fee for your first 10 properties. You earn 10–15% commission automatically on every guest order.</div></div>
     </div>
   </div>
 </section>
@@ -1266,7 +1288,7 @@ const responses=[
   {keys:['vegan','vegetarian','plant','dairy free','gluten','allerg','intoleran','nut','halal'],reply:'Every package can be adapted for vegan, vegetarian, halal, gluten-free and dairy-free requirements. Please note your dietary needs in the "Special requests" field at checkout, or email us at hello@hamperkey.co.uk before ordering so we can confirm availability.'},
   {keys:['dog','pet','animal','paw'],reply:'Yes! Our Dog-Friendly Welcome Pack (from £25) includes organic grain-free baked biscuits, natural beef chew sticks, training treats, biodegradable waste bags, a silicone collapsible travel bowl, and a personalised pet welcome card. Perfect for stays that welcome four-legged guests.'},
   {keys:['celebration','birthday','anniversary','honeymoon','wedding','occasion','special'],reply:'The Celebration Ready package (from £75) is ideal — it includes seasonal flowers, champagne or prosecco, 12 hand-rolled truffles, and a personalised handwritten card with your message. We set it up beautifully before you arrive so the celebration starts the moment you walk in.'},
-  {keys:['partner','host','property','airbnb','hotel','commission','earn','revenue'],reply:'HamperKey partners earn 10–20% commission on every guest order — completely passively. No setup fee for your first 10 properties. You share a link, we handle everything else. Email hello@hamperkey.co.uk or click "Become a Partner" to get started.'},
+  {keys:['partner','host','property','airbnb','hotel','commission','earn','revenue'],reply:'HamperKey partners earn 10–15% commission on every guest order — completely passively. No setup fee for your first 10 properties. You share a link, we handle everything else. Email hello@hamperkey.co.uk or click "Become a Partner" to get started.'},
   {keys:['group','hen','stag','large','8','10','people','party'],reply:'The Group House Starter (from £299, serves 8–10) is our largest package. It includes 6 bottles of Kentish ales, 6 bottles of vintage cider, a full charcuterie and cheese grazing board, a complete brunch kit with eggs, bacon and sausages, and much more. Perfect for hen weekends, stag dos and large holiday houses.'},
   {keys:['wine','cheese','nibble','board'],reply:'The Wine, Cheese & Nibbles package (from £65, serves 2) includes a bottle of English sparkling or reserve red wine, three regional cheeses (Brie, Westcombe Cheddar, soft white), crispbreads, oatcakes, fig chutney, roasted almonds, grapes and olives. All sourced from British producers.'},
   {keys:['pizza','night','evening'],reply:'Pizza Night for 4–5 (from £45) includes 3 fresh pizzas (meat or veggie version), a mixed green salad, tomato salad, 4 cans of Kentish pale ale, garlic bread, and an olive oil & chilli sachet. All ready in the kitchen before you arrive — no cooking needed.'},
