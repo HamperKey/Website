@@ -203,6 +203,9 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .ao-section{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-d);grid-column:1/-1;margin-top:16px;margin-bottom:-4px}
 .ao-section:first-child{margin-top:0}
 .ao-card{border:1px solid var(--rule);border-radius:var(--rs);padding:16px 14px;position:relative;transition:all .2s;background:var(--white)}
+.ao-restricted{border-color:#E4B94C;background:#FFFBF0}
+.ao-lock{position:absolute;top:10px;right:10px;font-size:13px}
+.ao-restrict-note{font-size:10px;font-weight:700;letter-spacing:.3px;color:#9A7B1E;text-transform:uppercase;margin-top:2px}
 .ao-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(0,0,0,.07)}
 
 .ao-name{font-size:12px;font-weight:500;color:var(--dark);line-height:1.3;margin-bottom:4px}
@@ -651,6 +654,9 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="ao-card"><div class="ao-name">Biddenden &mdash; Sparkling Apple Juice 750ml</div><div class="ao-price">&pound;7.50</div><div class="ao-allerg">Non-alcoholic sparkling apple juice, pressed from 100% Kentish apples, not from concentrate</div><button class="ao-add" onclick="aoAdd(this,'Biddenden &mdash; Sparkling Apple Juice 750ml',7.5)">+</button></div>
       <div class="ao-card"><div class="ao-name">Biddenden &mdash; Pear Juice 1L</div><div class="ao-price">&pound;5.50</div><div class="ao-allerg">Farm-pressed Kentish pear juice, never from concentrate</div><button class="ao-add" onclick="aoAdd(this,'Biddenden &mdash; Pear Juice 1L',5.5)">+</button></div>
       <div class="ao-card"><div class="ao-name">Beck&apos;s Blue &mdash; Non-Alcoholic Lager (4-pack, 275ml)</div><div class="ao-price">&pound;4.50</div><div class="ao-allerg">Alcohol-free lager, 0.0%, brewed for full flavour without the alcohol</div><button class="ao-add" onclick="aoAdd(this,'Beck&apos;s Blue &mdash; Non-Alcoholic Lager (4-pack, 275ml)',4.5)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Orange Juice 1L</div><div class="ao-price">&pound;3.50</div><div class="ao-allerg">100% pure orange juice, not from concentrate</div><button class="ao-add" onclick="aoAdd(this,'Orange Juice 1L',3.50)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Van Nahmen White Peach Nectar</div><div class="ao-price">&pound;3.90</div><div class="ao-allerg">Organic German white peach nectar</div><button class="ao-add" onclick="aoAdd(this,'Van Nahmen White Peach Nectar',3.90)">+</button></div>
+      <div class="ao-card ao-restricted"><span class="ao-lock" title="Only available with the Celebration Ready package">&#x1F512;</span><div class="ao-name">IPA</div><div class="ao-price">&pound;5.50</div><div class="ao-allerg">Contains: Gluten (barley), Sulphites</div><div class="ao-restrict-note">Celebration Ready package only &middot; 18+</div><button class="ao-add" onclick="aoAdd(this,'IPA',5.50)">+</button></div>
       <span class="ao-section">Breakfast &amp; Dairy</span>
       <div class="ao-card"><div class="ao-name">Onken &mdash; Natural Set Yogurt 450g</div><div class="ao-price">&pound;2.09</div><div class="ao-allerg">Live-culture natural yogurt</div><button class="ao-add" onclick="aoAdd(this,'Onken &mdash; Natural Set Yogurt 450g',2.09)">+</button></div>
       <div class="ao-card"><div class="ao-name">President &mdash; Unsalted Butter 250g</div><div class="ao-price">&pound;3.49</div><div class="ao-allerg">French unsalted block butter, made with the finest milk and cream</div><button class="ao-add" onclick="aoAdd(this,'President &mdash; Unsalted Butter 250g',3.49)">+</button></div>
@@ -659,6 +665,10 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="ao-card"><div class="ao-name">Mature Cheddar with Pickled Onion 454g</div><div class="ao-price">&pound;5.99</div><div class="ao-allerg">Cheddar with pickled onion &amp; chives</div><button class="ao-add" onclick="aoAdd(this,'Mature Cheddar with Pickled Onion 454g',5.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Avocado (2-pack)</div><div class="ao-price">&pound;2.99</div><div class="ao-allerg">Ripe avocados</div><button class="ao-add" onclick="aoAdd(this,'Avocado (2-pack)',2.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Dr. Oetker &mdash; Pancake Mix 170g</div><div class="ao-price">&pound;1.50</div><div class="ao-allerg">Ready-to-cook classic pancake mix</div><button class="ao-add" onclick="aoAdd(this,'Dr. Oetker &mdash; Pancake Mix 170g',1.5)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Lightly Salted Butter 250g</div><div class="ao-price">&pound;2.20</div><div class="ao-allerg">Lightly salted block butter</div><button class="ao-add" onclick="aoAdd(this,'Lightly Salted Butter 250g',2.20)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Semi-Skimmed Milk 1L</div><div class="ao-price">&pound;1.80</div><div class="ao-allerg">Fresh semi-skimmed milk</div><button class="ao-add" onclick="aoAdd(this,'Semi-Skimmed Milk 1L',1.80)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Fruit Yogurt 450g</div><div class="ao-price">&pound;2.10</div><div class="ao-allerg">Live-culture fruit yogurt</div><button class="ao-add" onclick="aoAdd(this,'Fruit Yogurt 450g',2.10)">+</button></div>
+      <div class="ao-card"><div class="ao-name">The Fine Cheese Co. English Oak-Smoked Cheddar 200g</div><div class="ao-price">&pound;6.00</div><div class="ao-allerg">Oak-smoked English cheddar</div><button class="ao-add" onclick="aoAdd(this,'The Fine Cheese Co. English Oak-Smoked Cheddar 200g',6.00)">+</button></div>
       <span class="ao-section">Bread &amp; Deli</span>
       <div class="ao-card"><div class="ao-name">White Sourdough Loaf 450g</div><div class="ao-price">&pound;2.49</div><div class="ao-allerg">Traditional white sourdough</div><button class="ao-add" onclick="aoAdd(this,'White Sourdough Loaf 450g',2.49)">+</button></div>
       <div class="ao-card"><div class="ao-name">Sprouted Grains Sourdough Loaf 450g</div><div class="ao-price">&pound;2.49</div><div class="ao-allerg">Wholemeal spelt sourdough</div><button class="ao-add" onclick="aoAdd(this,'Sprouted Grains Sourdough Loaf 450g',2.49)">+</button></div>
@@ -673,10 +683,14 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="ao-card"><div class="ao-name">Goodfellas &mdash; Margherita Stonebaked Thin Pizza 334g</div><div class="ao-price">&pound;2.99</div><div class="ao-allerg">Thin-crust margherita pizza</div><button class="ao-add" onclick="aoAdd(this,'Goodfellas &mdash; Margherita Stonebaked Thin Pizza 334g',2.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Goodfellas &mdash; Pepperoni Stonebaked Thin Pizza 332g</div><div class="ao-price">&pound;2.99</div><div class="ao-allerg">Thin-crust pepperoni pizza</div><button class="ao-add" onclick="aoAdd(this,'Goodfellas &mdash; Pepperoni Stonebaked Thin Pizza 332g',2.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Franco Manca &mdash; Quattro Formaggi Sourdough Pizza 474g</div><div class="ao-price">&pound;5.99</div><div class="ao-allerg">Four-cheese sourdough pizza</div><button class="ao-add" onclick="aoAdd(this,'Franco Manca &mdash; Quattro Formaggi Sourdough Pizza 474g',5.99)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Crispbread &amp; Flatbreads</div><div class="ao-price">&pound;3.00</div><div class="ao-allerg">Crispbread &amp; flatbread selection</div><button class="ao-add" onclick="aoAdd(this,'Crispbread &amp; Flatbreads',3.00)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Fruit Conserve</div><div class="ao-price">&pound;4.00</div><div class="ao-allerg">Small-batch fruit conserve</div><button class="ao-add" onclick="aoAdd(this,'Fruit Conserve',4.00)">+</button></div>
+      <div class="ao-card"><div class="ao-name">The Fine Cheese Co. Fresh Brillat-Savarin &amp; Apricot Cheesecake Biscuits 120g</div><div class="ao-price">&pound;3.70</div><div class="ao-allerg">Sweet cheesecake-style biscuits</div><button class="ao-add" onclick="aoAdd(this,'The Fine Cheese Co. Fresh Brillat-Savarin &amp; Apricot Cheesecake Biscuits 120g',3.70)">+</button></div>
       <span class="ao-section">Salads &amp; Veg</span>
       <div class="ao-card"><div class="ao-name">Mixed Green Salad 450g</div><div class="ao-price">&pound;3.50</div><div class="ao-allerg">Mixed salad leaves</div><button class="ao-add" onclick="aoAdd(this,'Mixed Green Salad 450g',3.5)">+</button></div>
       <div class="ao-card"><div class="ao-name">Cherry Tomatoes 250g</div><div class="ao-price">&pound;1.60</div><div class="ao-allerg">Fresh cherry tomatoes</div><button class="ao-add" onclick="aoAdd(this,'Cherry Tomatoes 250g',1.6)">+</button></div>
       <div class="ao-card"><div class="ao-name">Cucumber</div><div class="ao-price">&pound;1.30</div><div class="ao-allerg">Fresh cucumber</div><button class="ao-add" onclick="aoAdd(this,'Cucumber',1.3)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Mixed Olives 150g</div><div class="ao-price">&pound;4.50</div><div class="ao-allerg">Mixed marinated olives</div><button class="ao-add" onclick="aoAdd(this,'Mixed Olives 150g',4.50)">+</button></div>
       <span class="ao-section">Frozen</span>
       <div class="ao-card"><div class="ao-name">Mixed Vegetables 2.5kg</div><div class="ao-price">&pound;7.20</div><div class="ao-allerg">Carrots, peas, green beans, sweetcorn, broad beans</div><button class="ao-add" onclick="aoAdd(this,'Mixed Vegetables 2.5kg',7.2)">+</button></div>
       <div class="ao-card"><div class="ao-name">Sweet Potato Gourmet Fries 2.5kg</div><div class="ao-price">&pound;9.50</div><div class="ao-allerg">Straight-cut, pre-seasoned, gluten-free</div><button class="ao-add" onclick="aoAdd(this,'Sweet Potato Gourmet Fries 2.5kg',9.5)">+</button></div>
@@ -692,11 +706,19 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="ao-card"><div class="ao-name">Blueberries 150g</div><div class="ao-price">&pound;2.99</div><div class="ao-allerg">Fresh blueberries</div><button class="ao-add" onclick="aoAdd(this,'Blueberries 150g',2.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Fyffes &mdash; Premium Bananas (5-pack)</div><div class="ao-price">&pound;1.19</div><div class="ao-allerg">Premium bananas, ready to eat</div><button class="ao-add" onclick="aoAdd(this,'Fyffes &mdash; Premium Bananas (5-pack)',1.19)">+</button></div>
       <div class="ao-card"><div class="ao-name">Oranges (4-pack)</div><div class="ao-price">&pound;2.65</div><div class="ao-allerg">Fresh oranges</div><button class="ao-add" onclick="aoAdd(this,'Oranges (4-pack)',2.65)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Clementines / Easy Peelers</div><div class="ao-price">&pound;2.60</div><div class="ao-allerg">Easy-peel clementines</div><button class="ao-add" onclick="aoAdd(this,'Clementines / Easy Peelers',2.60)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Seedless White Grapes 500g</div><div class="ao-price">&pound;3.50</div><div class="ao-allerg">Fresh seedless white grapes</div><button class="ao-add" onclick="aoAdd(this,'Seedless White Grapes 500g',3.50)">+</button></div>
       <div class="ao-card"><div class="ao-name">Watermelon</div><div class="ao-price">&pound;5.00</div><div class="ao-allerg">Farm-fresh whole watermelon</div><button class="ao-add" onclick="aoAdd(this,'Watermelon',5)">+</button></div>
       <div class="ao-card"><div class="ao-name">Seasonal Fruit Box</div><div class="ao-price">&pound;8.50</div><div class="ao-allerg">A curated seasonal fruit selection</div><button class="ao-add" onclick="aoAdd(this,'Seasonal Fruit Box',8.5)">+</button></div>
       <span class="ao-section">Snacks &amp; Pantry</span>
       <div class="ao-card"><div class="ao-name">Roasted Salted Peanuts 75g</div><div class="ao-price">&pound;0.85</div><div class="ao-allerg">Roasted, salted peanuts</div><button class="ao-add" onclick="aoAdd(this,'Roasted Salted Peanuts 75g',0.85)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Plain Muesli 500g</div><div class="ao-price">&pound;4.00</div><div class="ao-allerg">Traditional plain muesli</div><button class="ao-add" onclick="aoAdd(this,'Plain Muesli 500g',4.00)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Salted Cashews 150g</div><div class="ao-price">&pound;4.50</div><div class="ao-allerg">Roasted salted cashews</div><button class="ao-add" onclick="aoAdd(this,'Salted Cashews 150g',4.50)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Chocolate &amp; Truffles Selection</div><div class="ao-price">&pound;6.50</div><div class="ao-allerg">Assorted chocolates &amp; truffles</div><button class="ao-add" onclick="aoAdd(this,'Chocolate &amp; Truffles Selection',6.50)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Biscuits &amp; Cookies Selection</div><div class="ao-price">&pound;3.50</div><div class="ao-allerg">Assorted biscuits &amp; cookies</div><button class="ao-add" onclick="aoAdd(this,'Biscuits &amp; Cookies Selection',3.50)">+</button></div>
+      <div class="ao-card"><div class="ao-name">Pesto Crisps (Tartuflanghe)</div><div class="ao-price">&pound;2.80</div><div class="ao-allerg">Italian pesto-flavour crisps</div><button class="ao-add" onclick="aoAdd(this,'Pesto Crisps (Tartuflanghe)',2.80)">+</button></div>
       <div class="ao-card"><div class="ao-name">Itac &mdash; Almonds 400g</div><div class="ao-price">&pound;5.99</div><div class="ao-allerg">Natural almonds, no preservatives</div><button class="ao-add" onclick="aoAdd(this,'Itac &mdash; Almonds 400g',5.99)">+</button></div>
+      <div class="ao-card ao-restricted"><span class="ao-lock" title="Only available with the Celebration Ready package">&#x1F512;</span><div class="ao-name">Boero Dark Chocolate Cherry Shot</div><div class="ao-price">&pound;1.50</div><div class="ao-allerg">Contains: Milk &middot; Alcohol (Piedmont grappa)</div><div class="ao-restrict-note">Celebration Ready package only &middot; 18+</div><button class="ao-add" onclick="aoAdd(this,'Boero Dark Chocolate Cherry Shot',1.50)">+</button></div>
       <div class="ao-card"><div class="ao-name">Sea Salt Flakes 95g</div><div class="ao-price">&pound;2.50</div><div class="ao-allerg">Coarse sea salt flakes</div><button class="ao-add" onclick="aoAdd(this,'Sea Salt Flakes 95g',2.5)">+</button></div>
       <div class="ao-card"><div class="ao-name">Ground Black Pepper 41g</div><div class="ao-price">&pound;2.99</div><div class="ao-allerg">Ground black pepper</div><button class="ao-add" onclick="aoAdd(this,'Ground Black Pepper 41g',2.99)">+</button></div>
       <div class="ao-card"><div class="ao-name">Vanilla Ice Cream 900ml</div><div class="ao-price">&pound;3.99</div><div class="ao-allerg">Vanilla flavour with vanilla pods</div><button class="ao-add" onclick="aoAdd(this,'Vanilla Ice Cream 900ml',3.99)">+</button></div>
@@ -712,6 +734,46 @@ footer{background:var(--dark);padding:60px 40px 28px}
       <div class="ao-card"><div class="ao-name">Kent Crisps &mdash; Cheese &amp; Onion 150g</div><div class="ao-price">&pound;2.50</div><div class="ao-allerg">Locally made crisps</div><button class="ao-add" onclick="aoAdd(this,'Kent Crisps &mdash; Cheese &amp; Onion 150g',2.5)">+</button></div>
       <div class="ao-advisory">Allergen information is a guide only &mdash; please always check the actual product packaging, especially for a severe allergy.</div>
     </div>
+  </div>
+</section>
+
+<section class="sec" id="custom-request" style="background:#FAF6EE">
+  <div class="sec-in">
+    <p class="lbl">Can&apos;t Find It?</p>
+    <h2 class="stitle">Need <em>something specific</em>?</h2>
+    <p class="sintro">Can&apos;t find what you&apos;re looking for in our packages or add-ons? Tell us exactly what you&apos;d like and we&apos;ll confirm availability and pricing within 24 hours.</p>
+    <form id="customRequestForm" style="max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px" onsubmit="return submitCustomRequest(event)">
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Guest name *</label>
+        <input required name="guestName" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Contact email *</label>
+        <input required type="email" name="contactEmail" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Contact phone</label>
+        <input name="contactPhone" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Booking / property reference</label>
+        <input name="propertyOrBookingRef" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Arrival date</label>
+        <input type="date" name="arrivalDate" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box">
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">What would you like? *</label>
+        <textarea required name="itemsRequested" rows="4" placeholder="e.g. 2x oat milk, gluten-free bread, no nuts of any kind" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box"></textarea>
+      </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;color:var(--dark,#1F3B2C)">Dietary / allergy notes</label>
+        <textarea name="dietaryNotes" rows="2" style="width:100%;border:1px solid var(--rule,#ddd);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;box-sizing:border-box"></textarea>
+      </div>
+      <button type="submit" class="basket-checkout" id="crSubmitBtn" style="margin-top:4px;position:static">Send Request</button>
+      <div id="crStatus" style="font-size:13px;text-align:center"></div>
+    </form>
   </div>
 </section>
 
@@ -1016,11 +1078,19 @@ function openModal(k){
 function closeModal(){document.getElementById('modalOv').classList.remove('open');document.body.style.overflow='';}
 function closeModalOutside(e){if(e.target===document.getElementById('modalOv'))closeModal();}
 // ── AGE VERIFICATION (alcohol) ──
-// No standalone add-ons currently contain alcohol — HamperKey does not hold a
-// premises licence permitting general alcohol sales at this time. This list is
-// intentionally kept (rather than removed) so the age-gate mechanism is ready
-// to extend safely if a licence is obtained in future.
-const ALCOHOL_ADDON_NAMES = new Set([]);
+// NOTE (added when the Custom Request / restricted add-ons update was merged):
+// HamperKey's premises licence covers alcohol ONLY as part of the Celebration
+// Ready package (see ALCOHOL_PACKAGE_KEYS below) — it does NOT cover general
+// standalone alcohol sales. IPA and the Boero Dark Chocolate Cherry Shot
+// (contains grappa-macerated cherries) are alcohol, so they are gated two
+// ways: (1) RESTRICTED_TO_PACKAGE below blocks adding them unless Celebration
+// Ready is already in the basket, and (2) containsAlcohol() below still routes
+// them through the same age-gate as everything else. If this licensing
+// position changes, review both this comment and RESTRICTED_TO_PACKAGE.
+const ALCOHOL_ADDON_NAMES = new Set(['IPA','Boero Dark Chocolate Cherry Shot']);
+// Add-ons in this map can only be added to the basket while the given
+// package key is already present in the cart (see aoAdd below).
+const RESTRICTED_TO_PACKAGE = { 'IPA':'celebration', 'Boero Dark Chocolate Cherry Shot':'celebration' };
 // Only Celebration Ready currently contains alcohol (Prosecco), sold under a
 // limited/temporary permission. All other packages have been reformulated
 // with non-alcoholic alternatives.
@@ -1064,7 +1134,40 @@ let cart = [];
 //  Paste your Vercel function URL between the quotes below.
 //  It will look like: https://hamperkey-checkout.vercel.app/api/checkout
 // ==========================================================
-const CHECKOUT_ENDPOINT = 'https://hamperkey-checkout.vercel.app/api/checkout';
+function submitCustomRequest(e){
+  e.preventDefault();
+  const form = e.target;
+  const statusEl = document.getElementById('crStatus');
+  const guestName = form.guestName.value;
+  const contactEmail = form.contactEmail.value;
+  const contactPhone = form.contactPhone.value;
+  const propertyOrBookingRef = form.propertyOrBookingRef.value;
+  const arrivalDate = form.arrivalDate.value;
+  const itemsRequested = form.itemsRequested.value;
+  const dietaryNotes = form.dietaryNotes.value;
+
+  const subject = encodeURIComponent('Custom Request \u2014 ' + guestName);
+  const bodyLines = [
+    'Guest name: ' + guestName,
+    'Contact email: ' + contactEmail,
+    'Contact phone: ' + (contactPhone || '\u2014'),
+    'Booking reference: ' + (propertyOrBookingRef || '\u2014'),
+    'Arrival date: ' + (arrivalDate || '\u2014'),
+    '',
+    'Requested items:',
+    itemsRequested,
+    '',
+    'Dietary / allergy notes:',
+    (dietaryNotes || 'None provided')
+  ];
+  const body = encodeURIComponent(bodyLines.join('\n'));
+  const link = 'mailto:hello@hamperkey.co.uk?subject=' + subject + '&body=' + body;
+
+  statusEl.textContent = 'Opening your email app \u2014 just hit send once it loads.';
+  statusEl.style.color = '#2E7D32';
+  window.location.href = link;
+  return false;
+}
 
 // Turns a product name into a stable code the server recognises.
 // This MUST match the identical function inside api/checkout.js.
@@ -1105,8 +1208,17 @@ function addCustomToCart(name, price, notes){
   cartCountUpdate();
 }
 
+function pruneRestrictedAddons(){
+  cart = cart.filter(it=>{
+    const req = RESTRICTED_TO_PACKAGE[it.name];
+    if(!req) return true;
+    return cart.some(x=>x.id===req);
+  });
+}
+
 function removeFromCart(i){
   cart.splice(i,1);
+  pruneRestrictedAddons();
   renderBasket();
   cartCountUpdate();
 }
@@ -1291,6 +1403,11 @@ function _aoAddReal(btn,name,price){
   setTimeout(()=>{btn.textContent='+';btn.style.background='';},1600);
 }
 function aoAdd(btn,name,price){
+  const req = RESTRICTED_TO_PACKAGE[name];
+  if(req && !cart.some(it=>it.id===req)){
+    alert(name+' is only available as part of the Celebration Ready package. Add Celebration Ready to your basket first, then come back and add this.');
+    return;
+  }
   if(containsAlcohol(name)){ requireAgeThen(()=>_aoAddReal(btn,name,price)); return; }
   _aoAddReal(btn,name,price);
 }
