@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Veeve Essentials — arrival packages by HamperKey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F0EDE7;--white:#FFFFFF;--dark:#141210;--mid:#5A5550;--light:#9A948E;
+  --accent:#C9A24B;--accent-d:#8B6F2E;--burg:#5C1A2E;--rule:#E2DDD6;
+  --r:20px;--rs:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.55;font-size:16px}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{padding:40px 0 28px;text-align:center;border-bottom:1px solid var(--rule)}
+.brand{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-d)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.1;margin:10px 0 12px}
+.lead{max-width:600px;margin:0 auto;color:var(--mid);font-weight:300}
+section{padding:34px 0 6px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;margin-bottom:6px}
+.sub{color:var(--mid);font-size:14px;font-weight:300;margin-bottom:18px}
+.pkgs{display:grid;gap:14px}
+@media(min-width:760px){.pkgs{grid-template-columns:repeat(3,1fr)}}
+.pkg{position:relative;background:var(--white);border:1.5px solid var(--rule);border-radius:var(--r);padding:20px 18px 18px;cursor:pointer;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s}
+.pkg:hover{border-color:var(--accent)}
+.pkg input{position:absolute;opacity:0;pointer-events:none}
+.pkg:has(input:checked){border-color:var(--accent-d);box-shadow:0 0 0 3px rgba(201,162,75,.25)}
+.pkg:has(input:focus-visible){outline:2px solid var(--burg);outline-offset:2px}
+.pkg .tier{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--accent-d)}
+.pkg .name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;margin:4px 0 2px}
+.pkg .price{font-size:26px;font-weight:600}
+.pkg .price small{font-size:12px;font-weight:400;color:var(--light);margin-left:4px}
+.pkg .inc{font-size:12.5px;color:var(--mid);margin:10px 0 6px}
+.pkg ul{list-style:none;font-size:13px;color:var(--mid);font-weight:300;border-top:1px solid var(--rule);padding-top:10px}
+.pkg li{padding:2px 0 2px 14px;position:relative}
+.pkg li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.note{font-size:13px;color:var(--mid);margin-top:14px;font-weight:300}
+form{background:var(--white);border-radius:var(--r);padding:26px 22px;margin-top:4px;border:1px solid var(--rule)}
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+label .opt{font-weight:300;color:var(--light)}
+input[type=text],input[type=email],input[type=date],input[type=time],select,textarea{
+  width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1.5px solid var(--rule);border-radius:var(--rs);background:#FBFAF8;color:var(--dark)}
+textarea{min-height:84px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent-d);background:var(--white)}
+.group-title{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--accent-d);margin:26px 0 12px;padding-top:20px;border-top:1px solid var(--rule)}
+.group-title:first-child{margin-top:0;padding-top:0;border-top:0}
+.warn{display:none;margin-top:12px;background:#FBF1DC;border:1px solid #E7CF94;color:#6B531A;border-radius:var(--rs);padding:10px 12px;font-size:13.5px}
+.warn.on{display:block}
+.err{display:none;margin-top:12px;background:#F8E4E4;border:1px solid #E3B2B2;color:#7A2020;border-radius:var(--rs);padding:10px 12px;font-size:13.5px}
+.err.on{display:block}
+.summary{margin-top:24px;background:var(--bg);border-radius:var(--rs);padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.summary .s-l{font-size:14px;color:var(--mid)}
+.summary .s-l b{display:block;color:var(--dark);font-size:16px}
+.summary .s-r{font-size:24px;font-weight:600}
+.summary .s-r small{display:block;font-size:11.5px;font-weight:400;color:var(--light);text-align:right}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button{font:inherit;cursor:pointer;border:0;border-radius:50px;padding:14px 26px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.btn-main{background:var(--dark);color:#fff}
+.btn-main:hover{background:var(--burg)}
+.btn-alt{background:transparent;color:var(--dark);border:1.5px solid var(--dark)}
+.btn-alt:hover{background:var(--dark);color:#fff}
+.after{display:none;margin-top:16px;font-size:14px;color:var(--mid)}
+.after.on{display:block}
+.sent-box{display:none;margin-top:16px;border:1px dashed var(--accent-d);border-radius:var(--rs);padding:12px 14px;background:#FBFAF6;font-size:12.5px;white-space:pre-wrap;color:var(--mid);max-height:220px;overflow:auto}
+.sent-box.on{display:block}
+footer{text-align:center;padding:34px 0 48px;color:var(--light);font-size:13px}
+footer a{color:var(--accent-d)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img id="veeveLogo" src="veeve-logo.png" alt="Veeve" style="display:none;height:42px;margin:0 auto 14px" onload="this.style.display='block'" onerror="this.remove()">
+    <div class="brand">Veeve &times; HamperKey</div>
+    <h1>Arrive to a stocked kitchen</h1>
+    <p class="lead">Choose your Veeve Essentials package and we&rsquo;ll stock your stay with fresh British food before you arrive. Order at least 48 hours ahead, pay securely by card, and we&rsquo;ll confirm within 2&ndash;4 hours.</p>
+  </div>
+</header>
+
+<main class="wrap">
+<form id="orderForm" novalidate>
+
+  <section style="padding-top:0">
+    <div class="group-title">1 &middot; Package</div>
+    <div class="pkgs" id="pkgs" role="radiogroup" aria-label="Package size"></div>
+    <p class="note">Delivered to your holiday let before check-in. Each package builds on the one before it. No alcohol is included in Essentials.</p>
+  </section>
+
+  <section>
+    <div class="group-title">2 &middot; Your details</div>
+    <div class="grid two">
+      <div><label for="vName">Your name</label><input type="text" id="vName" autocomplete="name" required></div>
+      <div><label for="vEmail">Your email</label><input type="email" id="vEmail" autocomplete="email" required></div>
+    </div>
+
+    <div class="group-title">3 &middot; Your stay</div>
+    <div class="grid two">
+      <div><label for="pName">Property name <span class="opt">(optional)</span></label><input type="text" id="pName"></div>
+    </div>
+    <div class="grid two" style="margin-top:16px">
+      <div><label for="pAddr">Property address</label><input type="text" id="pAddr" autocomplete="street-address" required></div>
+      <div><label for="pPost">Postcode</label><input type="text" id="pPost" autocomplete="postal-code" required style="text-transform:uppercase"></div>
+    </div>
+
+    <div class="group-title">4 &middot; Timing &amp; access</div>
+    <div class="grid two">
+      <div><label for="dDate">Delivery date</label><input type="date" id="dDate" required></div>
+      <div><label for="cIn">Guest check-in (date &amp; time)</label>
+        <div class="grid two" style="gap:8px"><input type="date" id="cInDate" required aria-label="Check-in date"><input type="time" id="cInTime" required aria-label="Check-in time"></div>
+      </div>
+    </div>
+    <div class="grid two" style="margin-top:16px">
+      <div><label for="wFrom">Delivery window from</label><input type="time" id="wFrom" required></div>
+      <div><label for="wTo">Delivery window to</label><input type="time" id="wTo" required></div>
+    </div>
+    <div class="grid two" style="margin-top:16px">
+      <div><label for="access">Access</label>
+        <select id="access" required>
+          <option value="">Choose&hellip;</option>
+          <option>Cleaner will be at the property during the window</option>
+          <option>Keynest collection (details below)</option>
+          <option>Other (details below)</option>
+        </select>
+      </div>
+      <div><label for="accessNote">Access details <span class="opt">(optional)</span></label><input type="text" id="accessNote" placeholder="e.g. Keynest shop &amp; code, or call us for it"></div>
+    </div>
+    <div class="warn" id="warn48"></div>
+
+    <div class="group-title">5 &middot; Dietary needs &amp; requests</div>
+    <div class="grid">
+      <div><label for="diet">Dietary requirements or allergies <span class="opt">(optional)</span></label><textarea id="diet" placeholder="e.g. nut allergy, vegetarian, dairy-free"></textarea></div>
+      <div><label for="reqs">Requests, substitutions or notes <span class="opt">(optional)</span></label><textarea id="reqs"></textarea></div>
+    </div>
+  </section>
+
+  <div class="summary" aria-live="polite">
+    <div class="s-l"><b id="sumName">No package selected</b><span id="sumSub">Choose a package above</span></div>
+    <div class="s-r"><span id="sumPrice">&mdash;</span><small>paid by card at checkout</small></div>
+  </div>
+
+  <div class="err" id="err"></div>
+  <div class="actions">
+    <button type="submit" class="btn-main" id="sendBtn">Continue to payment</button>
+  </div>
+  <p class="after" id="after"></p>
+</form>
+
+<p class="note" style="margin-top:18px">You&rsquo;ll be taken to our secure payment page (Stripe). We recommend at least 48 hours&rsquo; notice so everything is sourced fresh. Questions? <a href="mailto:hello@hamperkey.co.uk" style="color:var(--accent-d)">hello@hamperkey.co.uk</a> or WhatsApp 07743 564837.</p>
+</main>
+
+<footer>
+  <div class="wrap">HamperKey &middot; <a href="mailto:hello@hamperkey.co.uk">hello@hamperkey.co.uk</a> &middot; 07743 564837</div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var EMAIL = 'hello@hamperkey.co.uk';
+  // EDIT THIS to your Vercel function URL if different:
+  var CHECKOUT_URL = 'https://hamperkey-checkout.vercel.app/api/veeve-guest-checkout';
+
+  // Guest prices (GBP) and contents, per Veeve's package lists.
+  var P1 = ['Free-range eggs','Lightly salted butter','Bananas and apples','Natural yoghurts','Mixed berry granola','Salted cashews','Chocolate and truffles','Kentish fruit conserve','Sparkling water','Biscuits','Diet Coke','Semi-skimmed milk','Orange juice','Sourdough-style bread','Kettle-style crisps'];
+  var P2 = ['Clementines','Seedless white grapes','Mixed olives','Crispbread and flatbreads','Plain muesli','Hummus'];
+  var P3 = ['Mature Kentish cheddar','Sparkling fruit drinks','Salted pistachios','Apple juice','Coca-Cola','Chocolate digestive biscuits','Fresh strawberries'];
+  var PACKAGES = [
+    {id:'p1', tier:'1–2 guests', name:'Essentials Small',  price:144,  inc:'Includes:', items:P1},
+    {id:'p2', tier:'3–4 guests', name:'Essentials Medium', price:194, inc:'Everything in Small, plus:', items:P2},
+    {id:'p3', tier:'5–6 guests', name:'Essentials Large',  price:262, inc:'Everything in Medium, plus:', items:P3}
+  ];
+
+  function el(tag, cls, text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
+  function $(id){ return document.getElementById(id); }
+  function money(n){ return '£'+n.toFixed(2).replace(/\.00$/,''); }
+
+  // Build package cards (text only, nothing user-supplied)
+  var holder = $('pkgs');
+  PACKAGES.forEach(function(p){
+    var lab = el('label','pkg');
+    var inp = el('input'); inp.type='radio'; inp.name='pkg'; inp.value=p.id; inp.required=true;
+    lab.appendChild(inp);
+    lab.appendChild(el('div','tier',p.tier));
+    lab.appendChild(el('div','name',p.name));
+    var price = el('div','price',money(p.price)); price.appendChild(el('small','', 'per order')); lab.appendChild(price);
+    lab.appendChild(el('div','inc',p.inc));
+    var ul = el('ul'); p.items.forEach(function(i){ ul.appendChild(el('li','',i)); }); lab.appendChild(ul);
+    inp.addEventListener('change', updateSummary);
+    holder.appendChild(lab);
+  });
+
+  function selectedPkg(){
+    var r = document.querySelector('input[name=pkg]:checked');
+    if(!r) return null;
+    for(var i=0;i<PACKAGES.length;i++) if(PACKAGES[i].id===r.value) return PACKAGES[i];
+    return null;
+  }
+  function updateSummary(){
+    var p = selectedPkg();
+    $('sumName').textContent = p ? p.name : 'No package selected';
+    $('sumSub').textContent  = p ? p.tier : 'Choose a package above';
+    $('sumPrice').textContent = p ? money(p.price) : '—';
+  }
+
+  // Dates: block past dates, warn if under 48h notice
+  var todayISO = (function(){ var d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); })();
+  ['dDate','cInDate'].forEach(function(id){ $(id).min = todayISO; });
+
+  function hoursUntilDelivery(){
+    var d = $('dDate').value; if(!d) return null;
+    var t = $('wFrom').value || '09:00';
+    var when = new Date(d+'T'+t+':00');
+    if(isNaN(when)) return null;
+    return (when - new Date())/36e5;
+  }
+  function checkNotice(){
+    var h = hoursUntilDelivery(), w = $('warn48');
+    if(h!==null && h<48){
+      w.textContent = 'This is under 48 hours’ notice. We’ll always try, but some fresh items may need substituting. We’ll confirm what’s possible.';
+      w.classList.add('on');
+    } else { w.classList.remove('on'); }
+  }
+  ['dDate','wFrom'].forEach(function(id){ $(id).addEventListener('change', checkNotice); });
+
+  function fmtDate(iso){
+    if(!iso) return '';
+    var p = iso.split('-'); if(p.length!==3) return iso;
+    return p[2]+'/'+p[1]+'/'+p[0];
+  }
+  function val(id){ return ($(id).value||'').trim(); }
+
+  function validate(){
+    var missing = [];
+    if(!selectedPkg()) missing.push('a package');
+    [['vName','your name'],['vEmail','your email'],['pAddr','the property address'],['pPost','the postcode'],
+     ['dDate','the delivery date'],['cInDate','the check-in date'],['cInTime','the check-in time'],['wFrom','the delivery window start'],['wTo','the delivery window end'],['access','the access method']
+    ].forEach(function(f){ if(!val(f[0])) missing.push(f[1]); });
+    if(missing.length) return 'Please add: '+missing.join(', ')+'.';
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('vEmail'))) return 'Please check your email address.';
+    if(val('cInDate') < val('dDate')) return 'The check-in date can’t be before the delivery date.';
+    if(val('cInDate')===val('dDate') && val('wTo') > val('cInTime')) return 'On a same-day check-in, the delivery window needs to end before the guest’s check-in time.';
+    if(val('wTo') <= val('wFrom')) return 'The delivery window end needs to be after the start.';
+    return '';
+  }
+
+  function showErr(msg){ var e=$('err'); e.textContent=msg; e.classList.toggle('on', !!msg); }
+  function showAfter(msg){ var a=$('after'); a.textContent=msg; a.classList.add('on'); }
+
+  function formData(){
+    var p = selectedPkg();
+    return { pkg:p.id, vName:val('vName'), vEmail:val('vEmail'), gName:val('vName'), pName:val('pName'), pAddr:val('pAddr'), pPost:val('pPost'),
+      dDate:val('dDate'), cInDate:val('cInDate'), cInTime:val('cInTime'), wFrom:val('wFrom'), wTo:val('wTo'),
+      access:val('access'), accessNote:val('accessNote'), diet:val('diet'), reqs:val('reqs') };
+  }
+
+  $('orderForm').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var msg = validate(); showErr(msg); if(msg) return;
+    var btn = $('sendBtn'); btn.disabled = true; btn.textContent = 'Taking you to payment…';
+    fetch(CHECKOUT_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(formData()) })
+      .then(function(r){ return r.json().then(function(d){ return {ok:r.ok, d:d}; }); })
+      .then(function(x){
+        if(x.ok && x.d.url){ window.location.href = x.d.url; return; }
+        throw new Error((x.d && x.d.error) || 'Something went wrong.');
+      })
+      .catch(function(e){
+        btn.disabled = false; btn.textContent = 'Continue to payment';
+        showErr('We couldn’t start the payment ('+e.message+'). Please try again, or email '+EMAIL+'.');
+      });
+  });
+
+  if(/[?&]paid=1/.test(location.search)){
+    showAfter('Thank you — payment received. We’ve got your order and will confirm by email within 2–4 hours.');
+    Array.prototype.forEach.call($('orderForm').children, function(c){ if(c.id!=='after') c.style.display='none'; });
+  }
+
+  // exposed for testing only
+  window.__veeveTest = { validate:validate, PACKAGES:PACKAGES };
+})();
+</script>
+</body>
+</html>
