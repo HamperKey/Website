@@ -442,6 +442,8 @@ footer{background:var(--dark);padding:60px 40px 28px}
 .vv-tier{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--accent-d)}
 .vv-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;margin:4px 0 2px}
 .vv-price{font-size:28px;font-weight:700;margin-bottom:10px}
+.vv-add{background:var(--dark);color:var(--white);border:0;border-radius:var(--rb);padding:12px 22px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;margin:0 0 14px;align-self:flex-start}
+.vv-add:hover{background:var(--burg)}
 .vv-card ul{list-style:none;font-size:13.5px;color:var(--mid);border-top:1px solid var(--rule);padding-top:12px;margin-top:4px}
 .vv-card li{padding:2px 0 2px 14px;position:relative}
 .vv-card li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
@@ -853,12 +855,11 @@ footer{background:var(--dark);padding:60px 40px 28px}
     <h2 class="stitle">Veeve <em>Essentials</em>.</h2>
     <p class="sintro">Staying with Veeve? Arrive to a stocked kitchen. Fresh Kentish and British food, delivered to your holiday let before check-in. Order at least 48 hours ahead.</p>
     <div class="vv-grid" style="text-align:left">
-      <div class="vv-card"><div class="vv-tier">1&ndash;2 guests</div><div class="vv-name">Essentials Small</div><div class="vv-price">&pound;144</div><ul><li>Free-range eggs &amp; lightly salted butter</li><li>Bananas, apples &amp; natural yoghurts</li><li>Granola, cashews &amp; Kentish conserve</li><li>Milk, orange juice &amp; sparkling water</li><li>Sourdough-style bread &amp; kettle-style crisps</li></ul></div>
-      <div class="vv-card"><div class="vv-tier">3&ndash;4 guests</div><div class="vv-name">Essentials Medium</div><div class="vv-price">&pound;194</div><ul><li>Everything in Small, plus:</li><li>Clementines &amp; seedless grapes</li><li>Mixed olives &amp; hummus</li><li>Crispbread, flatbreads &amp; plain muesli</li></ul></div>
-      <div class="vv-card"><div class="vv-tier">5&ndash;6 guests</div><div class="vv-name">Essentials Large</div><div class="vv-price">&pound;262</div><ul><li>Everything in Medium, plus:</li><li>Mature Kentish cheddar</li><li>Fresh strawberries &amp; pistachios</li><li>Sparkling fruit drinks, apple juice &amp; Coca-Cola</li></ul></div>
+      <div class="vv-card"><div class="vv-tier">1&ndash;2 guests</div><div class="vv-name">Essentials Small</div><div class="vv-price">&pound;144</div><button type="button" class="vv-add" onclick="addVeeveToCart('veeve-essentials-small-1-2-guests','Veeve Essentials Small (1-2 guests)',144)">Add to basket</button><ul><li>Free-range eggs &amp; lightly salted butter</li><li>Bananas, apples &amp; natural yoghurts</li><li>Granola, cashews &amp; Kentish conserve</li><li>Milk, orange juice &amp; sparkling water</li><li>Sourdough-style bread &amp; kettle-style crisps</li></ul></div>
+      <div class="vv-card"><div class="vv-tier">3&ndash;4 guests</div><div class="vv-name">Essentials Medium</div><div class="vv-price">&pound;194</div><button type="button" class="vv-add" onclick="addVeeveToCart('veeve-essentials-medium-3-4-guests','Veeve Essentials Medium (3-4 guests)',194)">Add to basket</button><ul><li>Everything in Small, plus:</li><li>Clementines &amp; seedless grapes</li><li>Mixed olives &amp; hummus</li><li>Crispbread, flatbreads &amp; plain muesli</li></ul></div>
+      <div class="vv-card"><div class="vv-tier">5&ndash;6 guests</div><div class="vv-name">Essentials Large</div><div class="vv-price">&pound;262</div><button type="button" class="vv-add" onclick="addVeeveToCart('veeve-essentials-large-5-6-guests','Veeve Essentials Large (5-6 guests)',262)">Add to basket</button><ul><li>Everything in Medium, plus:</li><li>Mature Kentish cheddar</li><li>Fresh strawberries &amp; pistachios</li><li>Sparkling fruit drinks, apple juice &amp; Coca-Cola</li></ul></div>
     </div>
-    <div style="text-align:center;margin-top:30px"><a href="veeve-guests.html" style="display:inline-block;background:var(--dark);color:var(--white);padding:14px 32px;border-radius:var(--rb);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase">Order Veeve Essentials</a></div>
-    <p style="font-size:12.5px;color:var(--light);margin-top:12px">No alcohol is included in Essentials.</p>
+    <p style="font-size:12.5px;color:var(--light);margin-top:22px">No alcohol is included in Essentials. No service charge on Veeve Essentials. Order at least 48 hours ahead.</p>
   </div>
 </section>
 
@@ -1297,7 +1298,8 @@ function renderBasket(){
       <button class="basket-remove" onclick="removeFromCart(${i})">Remove</button></div>
     </div>`;
   }).join('');
-  const svc = Math.round(sub*0.10*100)/100;
+  const svcBase = cart.reduce((a,it)=> a + (it.id==='veeve' ? 0 : it.price), 0);   // Veeve Essentials carry no service charge
+  const svc = Math.round(svcBase*0.10*100)/100;
   const total = Math.round((sub+svc)*100)/100;
   document.getElementById('basketSub').textContent='£'+sub.toFixed(2);
   document.getElementById('basketSvc').textContent='£'+svc.toFixed(2);
@@ -1596,6 +1598,13 @@ if(document.readyState!=='loading'){ routePages(); } else { window.addEventListe
   b.addEventListener('click',function(){ var o=l.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false'); });
   l.addEventListener('click',function(e){ if(e.target.tagName==='A'){ l.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
 })();
+</script>
+<script>
+function addVeeveToCart(sku,name,price){
+  cart.push({ id:'veeve', sku:sku, name:name, price:price, notes:'' });
+  cartCountUpdate();
+  openBasket();
+}
 </script>
 </body>
 </html>
